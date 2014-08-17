@@ -1,0 +1,22 @@
+{
+  "name": "ld30-warmup",
+  "version": "0.0.0",
+  "description": "warmup for ludum dare #30",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "bower-files": "git://github.com/sseemayer/bower-files",
+    "coffee-script": "^1.7.1",
+    "gulp": "^3.8.7",
+    "gulp-coffee": "^2.1.1",
+    "gulp-concat": "^2.3.4",
+    "gulp-jade": "^0.7.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-sourcemaps": "^1.1.1",
+    "gulp-stylus": "^1.3.0",
+    "gulp-uglify": "^0.3.1",
+    "nib": "^1.0.3"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "name": "ld30-warmup",
+  "version": "0.0.0",
+  "authors": [
+    "Stefan Seemayer <stefan@seemayer.de>"
+  ],
+  "description": "warmup for ludum dare #30",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "darlingjs": "~0.7.2",
+    "darlingjs-debug": "darlingjs/darlingjs-debug-module",
+    "darlingjs-pixijs": "darlingjs/darlingjs-pixi.js-module",
+    "darlingjs-resources": "darlingjs/darlingjs-resources-module",
+    "darlingjs-sound": "darlingjs/darlingjs-sound-module",
+    "darlingjs-geometry": "darlingjs/darlingjs-geometry-module#~0.7.0",
+    "darlingjs-physics": "darlingjs/darlingjs-physics-module",
+    "pixi": "~1.6.1",
+    "stats.js": "*",
+    "q": "1.0.1"
+  },
+  "overrides": {
+    "darlingjs-debug": {
+      "dependencies": {
+        "darlingjs": "*"
+      }
+    },
+    "stats.js": {
+      "main": "src/Stats.js"
+    },
+    "q": {
+      "main": "q.js"
+    },
+    "pixi": {
+      "main": "bin/pixi.dev.js",
+      "dependencies": {
+        "q": "*"
+      }
+    },
+    "darlingjs-pixijs": {
+      "dependencies": {
+        "pixi": "*",
+        "q": "*"
+      }
+    }
+  }
+}
