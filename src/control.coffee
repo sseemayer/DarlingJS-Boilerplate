@@ -12,9 +12,6 @@ mod.$s 'control',
   $added: () ->
     self = this
 
-
-    console.log 'added'
-
     @_keyDownHandler = (e) -> self.onKeyDown e
     @_keyUpHandler = (e) -> self.onKeyUp e
 
@@ -27,7 +24,6 @@ mod.$s 'control',
 
 
   addKeyWatch: (keyCode, $entity, binding) ->
-    console.log("Watching for #{keyCode} on #{$entity} (bound to '#{binding}')")
     if not @_keyToEntities[keyCode]
       @_keyToEntities[keyCode] = []
 
@@ -39,12 +35,10 @@ mod.$s 'control',
     entities.splice index, 1
 
   $addEntity: ($entity) ->
-    console.log "Add entity #{$entity}"
     for keyCode, binding of $entity.controllable.keyBindings
       @addKeyWatch keyCode, $entity, binding
 
   $removeEntity: ($entity) ->
-    console.log "Remove entity #{entity}"
     for keyCode, binding of $entity.controllable.keyBindings
       @removeKeyWatch keyCode, $entity, binding
 
@@ -53,7 +47,6 @@ mod.$s 'control',
     if ((not entities) or entities.length == 0) then return false
 
     for [$entity, binding] in entities
-      console.log "adding #{binding} on #{$entity}"
       $entity.$add binding
 
     e.preventDefault()
@@ -64,5 +57,4 @@ mod.$s 'control',
     if ((not entities) or entities.length == 0) then return false
 
     for [$entity, binding] in entities
-      console.log "removing #{binding} on #{$entity}"
       $entity.$remove binding
